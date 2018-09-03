@@ -1,0 +1,127 @@
+<application xmlns="http://apstandard.com/ns/1">
+
+	<name>%PRODUCT_NAME%</name>
+	<version>%PRODUCT_VERSION%</version>
+	<release>%PRODUCT_RELEASE%</release>
+	<homepage>%PRODUCT_WEBSITE%</homepage>
+	<package-homepage>%PRODUCT_DOWNLOAD%</package-homepage>
+	<default-prefix>/webmail/</default-prefix>
+
+	<summary>Webmail front-end for your Plesk e-mail server.</summary>
+	<description>
+		%PRODUCT_NAME% is a browser-based e-mail front end, designed to work with your existing Plesk Panel server. Installs easily, works fast, and supports change password option for Plesk accounts.
+	</description>
+
+	<icon path="images/wm_logo_64x64.png"/>
+
+	<screenshot path="images/wm_scrn1.png">
+		<description>Messages List screen</description>
+	</screenshot>
+	<screenshot path="images/wm_scrn2.png">
+		<description>Login screen</description>
+	</screenshot>
+	<screenshot path="images/wm_scrn3.png">
+		<description>Contacts screen</description>
+	</screenshot>
+	<screenshot path="images/wm_scrn4.png">
+		<description>Account settings</description>
+	</screenshot>
+	<screenshot path="images/wm_scrn5.png">
+		<description>Admin interface</description>
+	</screenshot>
+
+	<license must-accept="true">
+		<text>
+			<name>License Agreement</name>
+			<file>htdocs/LICENSE</file>
+		</text>
+	</license>
+
+	<configuration-script-language>php</configuration-script-language>
+
+	<upgradable-from version="8.0.0" release="1"/>
+
+	<changelog>
+%PRODUCT_CHANGELOG%
+	</changelog>
+
+	<entry-points>
+		<entry>
+			<path>/index.php</path>
+			<label>WebMail interface</label>
+		</entry>
+	</entry-points>
+
+	<installed-size>%INSTALL_SIZE%</installed-size>
+
+	<categories>
+		<category>Collaboration/Email</category>
+	</categories>
+
+	<languages>
+		<language>en</language>
+ 		<language>ar</language>
+ 		<language>zh</language>
+ 		<language>da</language>
+ 		<language>nl</language>
+ 		<language>fr</language>
+ 		<language>de</language>
+ 		<language>el</language>
+ 		<language>he</language>
+ 		<language>hu</language>
+ 		<language>it</language>
+ 		<language>ja</language>
+ 		<language>no</language>
+ 		<language>pl</language>
+ 		<language>pt</language>
+ 		<language>ru</language>
+ 		<language>es</language>
+ 		<language>sv</language>
+ 		<language>th</language>
+ 		<language>tr</language>
+ 		<language>uk</language>
+	</languages>
+
+
+	<settings>
+		<setting id="admin_name" type="string" default-value="mailadm">
+			<name>Username</name>
+			<description>WebMail Lite Admin login</description>
+		</setting>
+		<setting id="admin_password" type="password" default-value="12345">
+			<name>Password</name>
+			<description>WebMail Lite Admin password</description>
+		</setting>
+	</settings>
+
+
+
+  <requirements xmlns:php="http://apstandard.com/ns/1/php" xmlns:db="http://apstandard.com/ns/1/db">
+    <php:version min="5.6.0"/>
+    <php:extension>pdo_mysql</php:extension>
+    <php:safe-mode>false</php:safe-mode>
+    <db:db>
+      <db:id>main</db:id>
+      <db:default-name>webmail</db:default-name>
+      <db:can-use-tables-prefix>true</db:can-use-tables-prefix>
+      <db:server-type>mysql</db:server-type>
+      <db:server-min-version>5.0</db:server-min-version>
+    </db:db>
+  </requirements>
+
+  <mapping url="/" path="htdocs" xmlns:php="http://apstandard.com/ns/1/php">
+    <php:handler>
+      <php:extension>php</php:extension>
+    </php:handler>
+
+	<mapping url="tmp">
+      <php:permissions writable="true"/>
+    </mapping>
+
+	<mapping url="data">
+      <php:permissions writable="true"/>
+    </mapping>
+
+  </mapping>
+
+</application>
