@@ -1,5 +1,5 @@
 <application xmlns="http://apstandard.com/ns/1">
-  <name>%PRODUCT_NAME%</name>
+  <name>%PRODUCT_FULLNAME%</name>
   <version>%PRODUCT_VERSION%</version>
   <release>%PRODUCT_RELEASE%</release>
   <homepage>%PRODUCT_WEBSITE%</homepage>
