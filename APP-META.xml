@@ -72,11 +72,11 @@
   <settings>
     <setting id="admin_name" type="string" default-value="mailadm">
       <name>Username</name>
-      <description>WebMail Lite Admin login</description>
+      <description>Admin login</description>
     </setting>
     <setting id="admin_password" type="password" default-value="12345">
       <name>Password</name>
-      <description>WebMail Lite Admin password</description>
+      <description>Admin password</description>
     </setting>
   </settings>
   <requirements xmlns:php="http://apstandard.com/ns/1/php" 
@@ -97,9 +97,6 @@
     <php:handler>
       <php:extension>php</php:extension>
     </php:handler>
-    <mapping url="tmp">
-      <php:permissions writable="true"/>
-    </mapping>
     <mapping url="data">
       <php:permissions writable="true"/>
     </mapping>
