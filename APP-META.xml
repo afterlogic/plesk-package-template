@@ -32,7 +32,7 @@
     </text>
   </license>
   <configuration-script-language>php</configuration-script-language>
-  <upgradable-from version="8.0.0" release="1"/>
+  <upgradable-from version="9.0.0" release="1"/>
   <changelog>
 %PRODUCT_CHANGELOG%
   </changelog>
@@ -40,6 +40,10 @@
     <entry>
       <path>/index.php</path>
       <label>WebMail interface</label>
+    </entry>
+    <entry>
+      <path>adminpanel/index.php</path>
+      <label>AdminPanel interface</label>
     </entry>
   </entry-points>
   <installed-size>%INSTALL_SIZE%</installed-size>
@@ -81,7 +85,7 @@
   </settings>
   <requirements xmlns:php="http://apstandard.com/ns/1/php" 
     xmlns:db="http://apstandard.com/ns/1/db">
-    <php:version min="5.6.0"/>
+    <php:version min="7.0.0"/>
     <php:extension>pdo_mysql</php:extension>
     <php:safe-mode>false</php:safe-mode>
     <db:db>
