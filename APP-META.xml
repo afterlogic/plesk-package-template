@@ -74,18 +74,18 @@
     <language>uk</language>
   </languages>
   <settings>
-    <setting id="admin_name" type="string" default-value="mailadm">
+    <setting id="admin_name" type="string" default-value="superadmin">
       <name>Username</name>
       <description>Admin login</description>
     </setting>
-    <setting id="admin_password" type="password" default-value="12345">
+    <setting id="admin_password" type="password" default-value="">
       <name>Password</name>
       <description>Admin password</description>
     </setting>
   </settings>
   <requirements xmlns:php="http://apstandard.com/ns/1/php" 
     xmlns:db="http://apstandard.com/ns/1/db">
-    <php:version min="7.0.0"/>
+    <php:version min="7.2.5"/>
     <php:extension>pdo_mysql</php:extension>
     <php:safe-mode>false</php:safe-mode>
     <db:db>
@@ -93,7 +93,7 @@
       <db:default-name>webmail</db:default-name>
       <db:can-use-tables-prefix>true</db:can-use-tables-prefix>
       <db:server-type>mysql</db:server-type>
-      <db:server-min-version>5.0</db:server-min-version>
+      <db:server-min-version>5.7.8</db:server-min-version>
     </db:db>
   </requirements>
   <mapping url="/" path="htdocs" 
