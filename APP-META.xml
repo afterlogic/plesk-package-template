@@ -42,7 +42,7 @@
       <label>WebMail interface</label>
     </entry>
     <entry>
-      <path>adminpanel/index.php</path>
+      <path>adminpanel/</path>
       <label>AdminPanel interface</label>
     </entry>
   </entry-points>
