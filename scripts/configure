@@ -41,7 +41,7 @@ function install( $argv, &$settings ) {
 	$sDbPassword = getenv('DB_main_PASSWORD') ;
 	
 	$settings->SetConf( 'AdminLogin', $sAdminLogin ) ;
-	$settings->SetConf( 'AdminPassword', \Aurora\System\Api::GetModuleDecorator('AdminAuth')->CryptPassword($sAdminPassword));
+	$settings->SetConf( 'AdminPassword', password_hash(trim($sAdminPassword), PASSWORD_BCRYPT) );
 	$settings->SetConf( 'DBHost', $sDbHost);
 	$settings->SetConf( 'DBName', $sDBName ) ;
 	$settings->SetConf( 'DBLogin', $sDbLogin ) ;
